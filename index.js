@@ -8,7 +8,21 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (arrDates, data) => {
+  const sortDate = [];
+  for (const element of arrDates){
+    const result = (new Date(element).getTime() / 1000).toString();
+    sortDate.push(result);
+  }
+
+  if (data === undefined){
+    sortDate.sort((a, b) => a - b);
+    return sortDate.join(" - ");
+  } else {
+    sortDate.sort((a, b) => a + b);
+    return sortDate[data];
+  }
+}
 
 // ! JANGAN DIMODIFIKASI
 (() => {
