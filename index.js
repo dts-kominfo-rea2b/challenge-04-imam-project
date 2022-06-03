@@ -17,7 +17,7 @@ const createDate = (arrDates, data) => {
 
   if (data === undefined){
     sortDate.sort((a, b) => a - b);
-    return sortDate.join(" - ");
+    return sortDate.join("-");
   } else {
     sortDate.sort((a, b) => a + b);
     return sortDate[data];
